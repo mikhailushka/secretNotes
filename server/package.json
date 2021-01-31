@@ -1,0 +1,30 @@
+{
+  "name": "secret-service-server",
+  "version": "1.0.0",
+  "description": "server part for secret service",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "nodemon --ext js --watch src"
+  },
+  "author": "mikhailushka <m_georgievskii@mail.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "mongodb-cli": "^1.0.0",
+    "mongoose": "^5.11.14",
+    "mongoose-bcrypt": "^1.9.0",
+    "morgan": "^1.10.0",
+    "short-unique-id": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "nodemon": "^1.19.4"
+  },
+  "type": "module"
+}
