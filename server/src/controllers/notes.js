@@ -63,9 +63,10 @@ export const notesAceesToNote = (req, res) => {
     } else if (!note) {
       res.sendStatus(404)
     } else {
-      let a;
+      let a, b;
       try {
         a = decrypt(note.password, req.params.password);
+        b = decrypt(note.description, a);
       } catch (eass) {
         return res.send({
           password: 'invalid'
@@ -73,7 +74,7 @@ export const notesAceesToNote = (req, res) => {
       }
       if (a === req.params.password) {
         res.send({
-          description: a
+          description: b
         })
       } else {
         res.send({
