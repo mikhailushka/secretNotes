@@ -71,8 +71,6 @@ export default {
           password: this.password
         })
 
-        debugger;
-
         if (response.data.password === 'invalid') {
           this.flashMessage.error({title: 'Действие с записью', message: 'Вы ввели не верный пароль'})
         } else {
